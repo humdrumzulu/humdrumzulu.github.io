@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #002366; /* Nice dark blue color */
+    color: #fff; /* White text for better contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: -1; /* Place it below everything */
+    pointer-events: none; /* Ensure it doesn't block interactions */
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Add padding to prevent cutting into the edge */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+    margin-bottom: 20px; /* Add bottom margin to navbar */
+}
+
+.navbar-left span {
+    font-size: 20px;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent; /* Remove background color */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+}
+
+.profile-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 300px; /* 2x bigger */
+    height: 300px; /* 2x bigger */
+    border-radius: 50%; /* Makes the image round */
+    object-fit: cover;
+}
+
+.profile-name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 36px; /* 2x bigger */
+    font-weight: 600; /* More weight */
+    font-style: italic;
+}
+
+.round-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #002366; /* Dark blue text */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+
+.round-button:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter background on hover */
+}
+
+.donate-button {
+    background-color: transparent; /* Transparent background */
+    color: #fff; /* White text */
+    border: 2px solid #fff; /* White border */
+    padding: 15px 30px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0; /* Adjusted margin top */
+    margin-bottom: 15px; /* Adjusted margin bottom */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #fff; /* White background on hover */
+    color: #002366; /* Dark blue text on hover */
+    border-color: #fff; /* Maintain white border on hover */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px; /* Gap between buttons */
+    margin-bottom: 10px; /* Bottom margin to prevent overlap */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 20px; /* Reduce padding for smaller screens */
+    }
+
+    .profile-pic {
+        width: 200px; /* Adjust size for smaller screens */
+        height: 200px; /* Adjust size for smaller screens */
+    }
+
+    .profile-name {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .round-button {
+        padding: 8px 16px; /* Adjust button padding for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .donate-button {
+        padding: 12px 24px; /* Adjust button padding for smaller screens */
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
