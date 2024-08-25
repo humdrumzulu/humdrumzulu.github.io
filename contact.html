@@ -1,55 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/jpeg" href="favicon.jpg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me - HumdrumZulu</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>HumdrumZulu's Twitch Stream</title>
     <style>
-        /* Additional styling for the centered text */
-        .centered-text {
+        body {
+            background-color: #18181B;
+            color: white;
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 50px; /* Adjust as needed */
-            margin-left: 20px; /* Adjust left margin */
-            margin-right: 20px; /* Adjust right margin */
-            font-size: 24px;
-            font-weight: 600;
-            color: #fff; /* White text */
+            margin: 0;
+            padding: 0;
         }
-        
-        /* Additional styling for the contact information */
-        .contact-info {
-            text-align: center;
-            margin-top: 20px; /* Adjust as needed */
-            margin-left: 20px; /* Adjust left margin */
-            margin-right: 20px; /* Adjust right margin */
-            font-size: 18px;
-            color: #fff; /* White text */
-            line-height: 1.6; /* Increase line height for readability */
+
+        h1 {
+            margin: 20px 0;
+            font-size: 2em;
+        }
+
+        .stream-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        .stream-container iframe {
+            width: 80%;
+            height: 80%;
+            border: none;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
-        <div class="navbar-left">
-            <span>Contact</span>
-        </div>
-        <div class="navbar-right">
-            <a href="humdrumzulu.github.io" class="nav-link">Homepage</a>
-        </div>
-    </div>
-
-    <!-- Background overlay -->
-    <div class="background-overlay"></div>
-
-    <!-- Centered text -->
-    <div class="centered-text">
-        <p style="font-size: 36px; font-weight: 600; font-style: italic;">CONTACT ME:</p>
-        <p class="contact-info">Business inquiries: humdrumzulucontact@gmail.com</p>
-        <p class="contact-info">If you want to contact me directly, you can send me a DM on Instagram</p>
-        <p style="font-size: 10px; font-weight: 600; font-style: italic;">(links are on the homepage)</p>
+    <h1>Welcome to HumdrumZulu's Twitch Stream</h1>
+    <div class="stream-container">
+        <iframe
+            src="https://player.twitch.tv/?channel=HumdrumZulu&parent=humdrumzulu.github.io"
+            frameborder="0"
+            allowfullscreen="true"
+            scrolling="no">
+        </iframe>
     </div>
 </body>
 </html>
