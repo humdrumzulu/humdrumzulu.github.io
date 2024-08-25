@@ -5,39 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HumdrumZulu's Twitch Stream</title>
     <style>
-        body {
-            background-color: #18181B;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
+        body, html {
             margin: 0;
             padding: 0;
-        }
-
-        h1 {
-            margin: 20px 0;
-            font-size: 2em;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
         }
 
         .stream-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .stream-container iframe {
-            width: 80%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
             border: none;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to HumdrumZulu's Twitch Stream</h1>
     <div class="stream-container">
         <iframe
-            src="https://player.twitch.tv/?channel=HumdrumZulu&parent=humdrumzulu.github.io"
+            src="https://player.twitch.tv/?channel=HumdrumZulu&parent=humdrumzulu.github.io&controls=false"
             frameborder="0"
             allowfullscreen="true"
             scrolling="no">
